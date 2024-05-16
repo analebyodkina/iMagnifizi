@@ -4,13 +4,20 @@
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 .wrapper {
-    max-width: 1440rem;
+    max-width: 1920rem;
     margin-inline: auto;
+    background: $base-bg;
+    display: flex;
+    flex-direction: column;
+
 }
 .container {
-    max-width: 1200rem;
+    max-width: 1410rem;
     padding: 0 15rem;
     margin-inline: auto;
+}
+main {
+    flex-grow: 1;
 }
 body {
     font-family: $ff;
@@ -37,28 +44,28 @@ ul {
 button {
     padding: 0;
   }
-.title {
-    @include text($ff, 48rem, 56rem, 700, $color-text);
-    margin-top: 111rem;
-    margin-bottom: 70px;
-    @include tablet-small-768{
-        font-size: 35px;
-        line-height: 45px;
-        margin-top: 70px;
-        margin-bottom: 40px;
-    }
-}
-.desc {
-    @include text($ff, 16px, 19px, 400, $color-text);
-    margin-top: 111px;
-    margin-bottom: 123px;
-    margin-inline: auto;
-    max-width: 837px;
-    @include tablet-small-768 {        
-        margin-top: 40px;
-        margin-bottom: 40px;
-    }
-}
+// .title {
+//     @include text($ff, 48rem, 56rem, 700, $color-text);
+//     margin-top: 111rem;
+//     margin-bottom: 70px;
+//     @include tablet-small-768{
+//         font-size: 35px;
+//         line-height: 45px;
+//         margin-top: 70px;
+//         margin-bottom: 40px;
+//     }
+// }
+// .desc {
+//     @include text($ff, 16px, 19px, 400, $color-text);
+//     margin-top: 111px;
+//     margin-bottom: 123px;
+//     margin-inline: auto;
+//     max-width: 837px;
+//     @include tablet-small-768 {        
+//         margin-top: 40px;
+//         margin-bottom: 40px;
+//     }
+// }
 // КАСТОМИЗИРОВАТЬ СКРОЛ
 *::-webkit-scrollbar {
     width: 10rem;

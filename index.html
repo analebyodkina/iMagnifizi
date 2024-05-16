@@ -9,15 +9,28 @@
 </head>
 <body>
 	<div class="wrapper">
-		<div class="container">
-			<header class="header">
+		
+			<div class="logo">
+				<picture>
+					<!-- <source srcset="./img/main-logo.webp 1x, ./img/main-logo@2x.webp 2x" type="image/webp">
+					<source srcset="./img/main-logo.png 1x, ./img/main-logo@2x.png 2x" type="image/png">  -->
+					<img fetchpriority="high" src="./img/main-logo.png" alt="iMagnifizi logo" width="165" height="100">
+				</picture>
+				<!-- <img src="./img/main-logo.png" alt="logo"> -->
+
+			</div>
+			
+
+			<header class="header container">
 				<a href="#" class="header__logo"></a>
 				<nav class="header__nav nav">
 					<ul class="header__ul" id="headerUl">
 						<li class="nav__li"><a href="#">Home</a></li>
-						<li><a href="#">About</a></li>
-						<li><a href="#">Contact</a></li>
-						<li><a href="#">Projects</a></li>						
+						<li class="nav__li"><a href="##">Elettronica</a></li>
+						<li class="nav__li"><a href="##">Sport</a></li>
+						<li class="nav__li"><a href="##">Tempo libero</a></li>
+						<li class="nav__li"><a href="#">Casa</a></li>
+											
 						<span class="material-symbols-outlined" id="close" onclick="navToggle()">close</span>
 					</ul>
 				</nav>
@@ -25,6 +38,88 @@
 					<span class="material-symbols-outlined" onclick="navToggle()">menu</span>
 			   </div>
 			</header>
+
+			<main class="main container">
+				<aside class="sidebar _left">
+					<div class="sidebar__header">Seguici:</div>
+					<div class="sidebar__items">
+						<a href="##">
+							<div class="sidebar__item item">
+								<div class="item__title">IMAGNIFICI20</div>
+								<div class="item__image">
+									<picture>
+										<source srcset="./img/girl-with-watch.webp 1x, ./img/girl-with-watch@2x.webp 2x" type="image/webp"><source srcset="./img/girl-with-watch.jpg 1x, ./img/girl-with-watch.jpg 2x" type="image/jpg"> <img fetchpriority="high" src="./img/girl-with-watch.jpg" alt="iMagnifizi logo" width="280" height="132">
+									</picture>
+	
+								</div>
+								<a href="##" class="item__category">Elettronica</a>
+								<div class="item__desc"></div>
+								<div class="item__date"></div>
+								
+							</div>
+						</a>
+	
+						<a href="##">
+							<div class="sidebar__item item">
+								<div class="item__title">IMAGNIFICI20</div>
+								<div class="item__image">
+									<picture>
+										<source srcset="./img/girl-with-watch.webp 1x, ./img/girl-with-watch@2x.webp 2x" type="image/webp"><source srcset="./img/girl-with-watch.jpg 1x, ./img/girl-with-watch.jpg 2x" type="image/jpg"> <img fetchpriority="high" src="./img/girl-with-watch.jpg" alt="iMagnifizi logo" width="280" height="132">
+									</picture>
+	
+								</div>
+								<a href="##" class="item__category">Elettronica</a>
+								<div class="item__desc"></div>
+								<div class="item__date"></div>
+								
+							</div>
+						</a>
+						
+					</div>
+	
+	
+				</aside>
+
+				<section class="main"></section>
+
+				<aside class="sidebar _right">
+					<div class="sidebar__header">Altro:</div>
+					<div class="sidebar__items">
+						<a href="##">
+							<div class="sidebar__item item">
+								<div class="item__title">IMAGNIFICI20</div>
+								<div class="item__image">
+									<picture>
+										<source srcset="./img/girl-with-watch.webp 1x, ./img/girl-with-watch@2x.webp 2x" type="image/webp"><source srcset="./img/girl-with-watch.jpg 1x, ./img/girl-with-watch.jpg 2x" type="image/jpg"> <img fetchpriority="high" src="./img/girl-with-watch.jpg" alt="iMagnifizi logo" width="280" height="132">
+									</picture>
+	
+								</div>
+								<a href="##" class="item__category">Elettronica</a>
+								<div class="item__desc"></div>
+								<div class="item__date"></div>
+								
+							</div>
+						</a>
+	
+						<a href="##">
+							<div class="sidebar__item item">
+								<div class="item__title">IMAGNIFICI20</div>
+								<div class="item__image">
+									<picture>
+										<source srcset="./img/girl-with-watch.webp 1x, ./img/girl-with-watch@2x.webp 2x" type="image/webp"><source srcset="./img/girl-with-watch.jpg 1x, ./img/girl-with-watch.jpg 2x" type="image/jpg"> <img fetchpriority="high" src="./img/girl-with-watch.jpg" alt="iMagnifizi logo" width="280" height="132">
+									</picture>
+	
+								</div>
+								<a href="##" class="item__category">Elettronica</a>
+								<div class="item__desc"></div>
+								<div class="item__date"></div>
+								
+							</div>
+						</a>
+						
+					</div>
+				</aside>
+			</main>
 			 
 			<footer class="footer">
 				<a href="#" class="footer__logo"></a>
@@ -39,25 +134,9 @@
 				</nav>
 
 			</footer>
-			 <label class="forms">
-				<span class="forms__title">Password</span>
-				<input class="forms__input" type="password" placeholder="Enter your password" name="password" required>
-			</label>
-			<label class="forms">
-				<span class="forms__title">TITLE</span>
-				<textarea  class="forms__textarea" name="name" rows="5" cols="33" maxlength="300"></textarea>
-			</label>
-			<label class="forms">
-				<span class="forms__title">Language</span>
-					<select class="forms__select">
-					<option value="Ukrainian">Ukrainian</option>
-					<option value="English" selected>English</option>
-					<option value="France">Français</option>
-					<option value="Deutsch">Deutsch</option>                    
-				</select>
-			</label>
+			 
 			
-		</div>
+		
 			
 
 			
@@ -72,3 +151,5 @@
 	
 </body>
 </html>
+
+<!-- <picture><source srcset="./img/main-bg.webp 1x, ./img/main-bg@2x.webp 2x" type="image/webp"><source srcset="./img/main-bg.png 1x, ./img/main-bg@2x.png 2x" type="image/png"> <img fetchpriority="high" src="./img/main-bg.png" alt="hands holding plato pills bottle" width="1152" height="903"></picture> -->
