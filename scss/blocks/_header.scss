@@ -1,0 +1,21 @@
+.header {
+    background: $color-head;
+    padding: 0 15rem;
+    width: 100%;
+    .nav__ul {
+        display: flex;
+        align-items: center;
+        flex-grow: 1;
+        a {
+            display: block;
+            @include text ($ff, 16rem, 12.5rem, 400, $white);
+            padding: 15rem 14rem;
+            opacity: 0.7;
+        }
+    }
+    &__burger,
+    #close {
+        display: none;
+    }
+
+}

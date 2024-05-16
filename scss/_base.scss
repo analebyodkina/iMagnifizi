@@ -1,49 +1,75 @@
-*, *::before, *::after {
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+html {
+    font-size: 1px;
 }
 .wrapper {
-    max-width: 1920rem;
-    margin-inline: auto;
-    background: $base-bg;
-    display: flex;
-    flex-direction: column;
-
+  max-width: 1920rem;
+  margin-inline: auto;
+  background: $base-bg;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 .container {
-    max-width: 1410rem;
-    padding: 0 15rem;
-    margin-inline: auto;
+  max-width: 1410rem;
+  padding: 0 15rem;
+  margin-inline: auto;
 }
 main {
-    flex-grow: 1;
+  flex-grow: 1;
 }
 body {
-    font-family: $ff;
+  font-family: $ff;
+  font-size: 1px;
 }
 .overflow-y-hidden {
-	overflow-y: hidden;
+  overflow-y: hidden;
 }
-h1, h2, h3, h4, h5, h6, p, ul, li {
-    margin: 0;
-    padding: 0; 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
 }
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 img {
-    max-width: 100%;
-    width: 100%;
-    object-fit: cover;
-    height: 100%;
+  max-width: 100%;
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
 }
 ul {
-    list-style: none;
+  list-style: none;
 }
 button {
-    padding: 0;
+  padding: 0;
+}
+.logo {
+  padding: 30rem 30rem 20rem;
+  display: flex;
+  justify-content: center;
+  img {
+    max-width: 165rem;
   }
+}
+main {
+    display: grid;
+    grid-template-columns: 340rem 1fr 260rem;
+}
 // .title {
 //     @include text($ff, 48rem, 56rem, 700, $color-text);
 //     margin-top: 111rem;
@@ -61,19 +87,19 @@ button {
 //     margin-bottom: 123px;
 //     margin-inline: auto;
 //     max-width: 837px;
-//     @include tablet-small-768 {        
+//     @include tablet-small-768 {
 //         margin-top: 40px;
 //         margin-bottom: 40px;
 //     }
 // }
 // КАСТОМИЗИРОВАТЬ СКРОЛ
 *::-webkit-scrollbar {
-    width: 10rem;
-    height: 10rem;
+  width: 10rem;
+  height: 10rem;
 }
 *::-webkit-scrollbar-thumb {
-    border-radius: 16rem;
-    height: 10px;
-    width: 8rem;
-    background-color: rgba($color-primary, $alpha: 0.9);    
+  border-radius: 16rem;
+  height: 10px;
+  width: 8rem;
+  background-color: rgba($color-primary, $alpha: 0.9);
 }

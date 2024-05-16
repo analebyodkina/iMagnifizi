@@ -314,11 +314,16 @@ template {
   font-style: normal;
   font-display: swap;
   letter-spacing: 0.1em; }
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   scroll-behavior: smooth;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+
+html {
+  font-size: 1px; }
 
 .wrapper {
   max-width: 1920rem;
@@ -330,7 +335,8 @@ template {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
-          flex-direction: column; }
+          flex-direction: column;
+  min-height: 100vh; }
 
 .container {
   max-width: 1410rem;
@@ -343,12 +349,21 @@ main {
           flex-grow: 1; }
 
 body {
-  font-family: "SourceSansPro"; }
+  font-family: "SourceSansPro";
+  font-size: 1px; }
 
 .overflow-y-hidden {
   overflow-y: hidden; }
 
-h1, h2, h3, h4, h5, h6, p, ul, li {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li {
   margin: 0;
   padding: 0; }
 
@@ -368,6 +383,21 @@ ul {
 button {
   padding: 0; }
 
+.logo {
+  padding: 30rem 30rem 20rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  .logo img {
+    max-width: 165rem; }
+
+main {
+  display: grid;
+  grid-template-columns: 340rem 1fr 260rem; }
+
 *::-webkit-scrollbar {
   width: 10rem;
   height: 10rem; }
@@ -377,6 +407,33 @@ button {
   height: 10px;
   width: 8rem;
   background-color: rgba(22, 207, 193, 0.9); }
+
+.header {
+  background: #454e5c;
+  padding: 0 15rem;
+  width: 100%; }
+  .header .nav__ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1; }
+    .header .nav__ul a {
+      display: block;
+      font-family: "SourceSansPro";
+      font-size: 16rem;
+      line-height: 12.5rem;
+      font-weight: 400;
+      color: #fff;
+      padding: 15rem 14rem;
+      opacity: 0.7; }
+  .header__burger,
+  .header #close {
+    display: none; }
 
 @media (max-width: 992px) {
   .header__ul {
