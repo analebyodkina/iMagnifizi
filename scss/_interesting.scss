@@ -1,0 +1,312 @@
+//  выезжает подчеркивание слева направо 
+.link{
+    transition: $transition;
+		&:after {
+			content: "";
+			background-color: $primary;
+			display: block;
+			height: 2px;
+			width: 0%;
+			position: relative;
+			top: 2px;
+			-webkit-transition: width .3s ease-in-out;
+			-moz--transition: width .3s ease-in-out;
+			transition: width .3s ease-in-out;
+		}
+		&:hover:after, &:focus:after {
+    	width: 100%;
+		}
+}
+
+
+// форма с кнопкой subscribe 
+<section class="subscribe-section">
+	<div class="subscribe-section__title">Subscribe to get the Latest News</div>
+	<div class="subscribe-section__desc">We recommended you to subscribe to our newspaper, drop your email below to get daily update about us</div>
+	<form class="subscribe-section__form">
+		<input type="email" placeholder="Enter your email addres">
+		<button class="btn _primary">
+			<img src="img/icons/send.svg" alt="send-icon">
+			<span>Subscribe</span>					
+		</button>
+	</form>	
+</section>
+
+&__form {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background: $grad-input;
+	border-radius: 70px;
+	box-shadow: 10px 24px 54px rgba(0, 0, 0, 0.07);
+	padding: 10px 10px 10px 0;
+	// @include tablet-small {
+	// 	flex-direction: column;
+	// 	gap: 20px;
+	// 	background: transparent;
+	// 	для адаптива, чтоб кнопка стала в столбик                   
+	// }
+	input {
+		width: 100%;
+			background: transparent;            
+			border-radius: 70px;
+			padding: 15px 15px 15px 44px;
+			border: 0;
+			outline: 0; 
+			// @include tablet-small {                
+            //     background: $grad-input;
+			// 	для адаптива, чтоб бг біл только у инпута                                
+            // }          
+			@include text($ff, 400, 1.6rem, 2.6rem, $white);
+			&::placeholder {
+				@include text($ff, 400, 1.8rem, 3rem, $white); 
+				opacity: 0.9;                            
+			} 
+			&:focus {
+				border: 1px solid $primary;
+			}        
+		}
+	}
+	btn {
+		@include tablet-small {            
+			width: 100%;                      
+		}
+	}
+	
+	// псевдоэлемент
+
+
+	display: flex;
+    align-items: center;
+	&::before {
+        content: url('../img/icons/check.svg');
+        display: inline-block;
+            width: 16px;
+            height: 18px;             
+            margin-right: 18px;
+    }
+	
+
+	// как сделать противоположный порядок элементов в секции (четной)
+
+<div class="care-section__row">
+	<div class="care-section__img">
+		<img src="img/care-image-1.png" alt="man using virtual reality">
+	</div>
+	<div class="care-section__info">
+		<div class="care-section__title">We complete every projects
+			extra care as customer need</div>
+		<div class="care-section__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at dictum risus, non suscipit arcu. Quisque aliquam posuere tortor, sit amet convallis nuncoe scelerisque in. orem ipsum  dolor sit amet, consectetur adipisicing elit. Labore eius molestiae facere, natus reprehenderit eaque eum, autem ipsam. Magfini, error. Tempora odit laborum iure inventore possimus laboriosam qui nam. </div>				
+		<a href="#" class="btn _primary">Read more</a>					
+	</div>
+</div>
+<div class="care-section__row">
+	<div class="care-section__img">
+		<img src="img/care-image-2.png" alt="man using virtual reality">
+	</div>
+	<div class="care-section__info">
+		<div class="care-section__title">We complete every projects
+			extra care as customer need</div>
+		<div class="care-section__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at dictum risus, non suscipit arcu. Quisque aliquam posuere tortor, sit amet convallis nuncoe scelerisque in. orem ipsum  dolor sit amet, consectetur adipisicing elit. Labore eius molestiae facere, natus reprehenderit eaque eum, autem ipsam. Magfini, error. Tempora odit laborum iure inventore possimus laboriosam qui nam. </div>				
+		<a href="#" class="btn _primary">Read more</a>					
+	</div>
+</div>	
+
+
+&__row {   
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    &:nth-child(even) .care-section__img{
+        order: 2;
+    }
+    &:nth-child(even) .care-section__info {
+        order: 1;
+    }
+    }
+
+
+// чтоб менюшка от бургера не скролилась: 
+
+1. <html lang="en" id="html">  даем айди
+2.  в script.js 
+
+function navToggle() {
+    var headerUl = document.getElementById("headerUl");
+    headerUl.classList.toggle("active");
+
+	var html = document.getElementById("html");
+	html.classList.toggle("overflow-y-hidden");
+  }
+
+3. идем в BASE и пишем класс
+.overflow-y-hidden {
+	overflow-y: hidden;
+}
+
+
+// Внутренние ссылки 
+
+<a href="#beauty">
+<h2 class="title beauty-section__title" id="beauty">
+
+
+
+// чтобы текст стал градиентом. прикол в том, что мы кидаем граниент поверх, а вебкиты ограничивают его тестом
+
+@include text($ff, 700, 1.2rem, 1.5rem, $color-text);
+		background: linear-gradient(44.11deg, #CD10FF 15.75%, #9F06FF 84.63%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+
+
+Видео с кнопкой
+
+<section class="video-section container" id="about-us">				
+					
+				<div class="video-section__image">			
+					<a onclick="checkSpinner()"><img src="img/video.webp" alt="video" width="1200" height="670"></a>
+					<a onclick="checkSpinner()" class="video-section__play">				
+						<svg width="124" height="124" viewBox="0 0 124 124" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M62 124C96.2417 124 124 96.2417 124 62C124 27.7583 96.2417 0 62 0C27.7583 0 0 27.7583 0 62C0 96.2417 27.7583 124 62 124Z" fill="#5454D4"/>
+							<path d="M71.74 61.565L52.7661 51.0653C52.6074 50.9773 52.4126 50.9783 52.2548 51.0679C52.0969 51.1575 51.9999 51.3222 52 51.5003V72.4997C51.9999 72.6778 52.0969 72.8425 52.2548 72.9321C52.4126 73.0217 52.6074 73.0227 52.7661 72.9347L71.74 62.435C71.9007 62.3462 72 62.1801 72 62C72 61.8199 71.9007 61.6538 71.74 61.565Z" fill="white"/>
+							</svg>
+							
+					</a>      
+				</div>
+			</section>
+
+.video-section {
+   
+    &__image {
+        position: relative;
+        cursor: pointer; 
+    }
+    a {
+        display: inline-block;
+    }
+    &__play {      
+        display: inline-block;
+        position: absolute;
+        z-index: 2;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 124rem;
+        border-radius: 50%;
+        transition: $transition;
+        &:hover {
+            transform: translate(-50%, -50%) scale(1.05);          
+        }  
+        &:active {
+            transform: translate(-50%, -50%) scale(0.9);          
+        }
+        svg {
+            @include mobile-576 {
+                max-width: 40rem;
+                max-height: 40rem;   
+            }            
+        }        
+        @include mobile-576 {
+            max-width: 40rem;
+            max-height: 40rem;   
+        }    
+    }
+}
+
+
+
+// Подключить анимации AOS в gulp 
+1. npm install aos --save
+2. в файл index.js добавить
+	// Подключение анимаций по скроллу
+		import AOS from 'aos';
+		AOS.init();
+3. в файл index.html   добавить <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+4. <section class="main-section" data-aos="fade-up" data-aos-duration="3000"> 
+
+
+
+
+// Кнопка с прикольной анимацией наведения 
+
+.btn {
+	display: inline-block;
+	background: none;
+	border-radius: 10px; 
+	padding: 18px 31px;
+	color: var(--white);
+	box-shadow: 0px 16px 47px -15px rgb(89, 11, 155);
+	font-size: 20px;	
+	font-weight: 500;
+	line-height: 22px;
+	transition: all .2s cubic-bezier(.19,1,.22,1);
+	overflow: hidden;
+	transform: translateZ(0);
+	position: relative;
+  	z-index: 1;	
+	  &:before,
+	  &:after {
+		border-radius: 10px;
+		content: '';
+		z-index: -1;
+		background: linear-gradient(102deg, #083F9B 0%, #7F56D9 100%);
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;	
+	  }
+	  &:after {
+		background: linear-gradient(100deg, #003f77, #05c4b5);
+		transform: scaleY(0);
+		transform-origin: top;
+		transition: transform .5s cubic-bezier(.19,1,.22,1);
+		transition-delay: .1s;
+	  }
+	  &:hover {
+		box-shadow: 0px 16px 47px -15px #003f77;
+	
+		&:after {
+		  transform: scaleY(1);
+		  transform-origin: bottom;
+		  transition-delay: 0s;
+		}
+	  }
+	  &:active {
+		transition: .3s all ease-in-out;
+		transform: scale(0.95);
+	  }
+}
+
+// КАСТОМИЗИРОВАТЬ СКРОЛ
+*::-webkit-scrollbar {
+    width: 10rem;
+    height: 10rem;
+}
+*::-webkit-scrollbar-thumb {
+    border-radius: 16rem;
+    height: 10px;
+    width: 8rem;
+    background-color: var(--accent);    
+}
+
+
+гладкое листание
+
+html {
+	scroll-behavior: smooth;
+}
+
+
+КОПИРАЙТ
+// copyright
+var currentYear = new Date().getFullYear();
+document.getElementById("footer-year").innerHTML = currentYear;
+
+© <span id="footer-year"></span> Enver, All Rights Reserved
+

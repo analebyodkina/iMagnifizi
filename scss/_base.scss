@@ -1,0 +1,72 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.wrapper {
+    max-width: 1440rem;
+    margin-inline: auto;
+}
+.container {
+    max-width: 1200rem;
+    padding: 0 15rem;
+    margin-inline: auto;
+}
+body {
+    font-family: $ff;
+}
+.overflow-y-hidden {
+	overflow-y: hidden;
+}
+h1, h2, h3, h4, h5, h6, p, ul, li {
+    margin: 0;
+    padding: 0; 
+}
+a {
+    text-decoration: none;
+}
+img {
+    max-width: 100%;
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+}
+ul {
+    list-style: none;
+}
+button {
+    padding: 0;
+  }
+.title {
+    @include text($ff, 48rem, 56rem, 700, $color-text);
+    margin-top: 111rem;
+    margin-bottom: 70px;
+    @include tablet-small-768{
+        font-size: 35px;
+        line-height: 45px;
+        margin-top: 70px;
+        margin-bottom: 40px;
+    }
+}
+.desc {
+    @include text($ff, 16px, 19px, 400, $color-text);
+    margin-top: 111px;
+    margin-bottom: 123px;
+    margin-inline: auto;
+    max-width: 837px;
+    @include tablet-small-768 {        
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+}
+// КАСТОМИЗИРОВАТЬ СКРОЛ
+*::-webkit-scrollbar {
+    width: 10rem;
+    height: 10rem;
+}
+*::-webkit-scrollbar-thumb {
+    border-radius: 16rem;
+    height: 10px;
+    width: 8rem;
+    background-color: rgba($color-primary, $alpha: 0.9);    
+}

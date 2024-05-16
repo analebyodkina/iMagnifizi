@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>iMagnifizi20.it</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="wrapper">
+		<div class="container">
+			<header class="header">
+				<a href="#" class="header__logo"></a>
+				<nav class="header__nav nav">
+					<ul class="header__ul" id="headerUl">
+						<li class="nav__li"><a href="#">Home</a></li>
+						<li><a href="#">About</a></li>
+						<li><a href="#">Contact</a></li>
+						<li><a href="#">Projects</a></li>						
+						<span class="material-symbols-outlined" id="close" onclick="navToggle()">close</span>
+					</ul>
+				</nav>
+				<div class="header__burger">
+					<span class="material-symbols-outlined" onclick="navToggle()">menu</span>
+			   </div>
+			</header>
+			 
+			<footer class="footer">
+				<a href="#" class="footer__logo"></a>
+				<nav class="nav">
+					<ul>
+						<li class="nav__li"><a href="#">Home</a></li>
+						<li><a href="#">About</a></li>
+						<li><a href="#"></a></li>
+						<li><a href="#"></a></li>
+						<li><a href="#">Contact</a></li>
+					</ul>
+				</nav>
+
+			</footer>
+			 <label class="forms">
+				<span class="forms__title">Password</span>
+				<input class="forms__input" type="password" placeholder="Enter your password" name="password" required>
+			</label>
+			<label class="forms">
+				<span class="forms__title">TITLE</span>
+				<textarea  class="forms__textarea" name="name" rows="5" cols="33" maxlength="300"></textarea>
+			</label>
+			<label class="forms">
+				<span class="forms__title">Language</span>
+					<select class="forms__select">
+					<option value="Ukrainian">Ukrainian</option>
+					<option value="English" selected>English</option>
+					<option value="France">Français</option>
+					<option value="Deutsch">Deutsch</option>                    
+				</select>
+			</label>
+			
+		</div>
+			
+
+			
+
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+	integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+	crossorigin="anonymous"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/script.js"></script>
+	
+</body>
+</html>
