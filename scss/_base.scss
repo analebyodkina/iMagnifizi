@@ -6,10 +6,11 @@
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 html {
-    font-size: 1px;
+  font-size: 1px;
 }
 .wrapper {
-  max-width: 1920rem;
+  max-width: 1950rem;
+  padding: 0 15rem;
   margin-inline: auto;
   background: $base-bg;
   display: flex;
@@ -17,12 +18,14 @@ html {
   min-height: 100vh;
 }
 .container {
-  max-width: 1410rem;
-  padding: 0 15rem;
+  max-width: 1380rem;
   margin-inline: auto;
 }
-main {
+.content {
+  width: 100%;
   flex-grow: 1;
+  display: grid;
+  grid-template-columns: 340rem 1fr 260rem;
 }
 body {
   font-family: $ff;
@@ -66,10 +69,7 @@ button {
     max-width: 165rem;
   }
 }
-main {
-    display: grid;
-    grid-template-columns: 340rem 1fr 260rem;
-}
+
 // .title {
 //     @include text($ff, 48rem, 56rem, 700, $color-text);
 //     margin-top: 111rem;

@@ -1,27 +1,77 @@
 .sidebar {
+    background: #f0f0f0;
+  &._left {
+    .sidebar__header {
+      background: $color-primary;
+    }
+  }
+  &._right {
+    .sidebar__header {
+      background: $yellow;
+    }
+  }
   &__header {
+    padding: 15rem 30rem;
+    @include text($ff, 16rem, 24rem, 600, $white);
+    opacity: 0.8;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
   }
 
   &__items {
+    display: flex;
+    flex-direction: column;
   }
 
   &__item {
+    padding: 30rem 30rem 20rem;
+    display: flex;
+    flex-direction: column;
   }
 
   .item {
+    
     &__title {
+      @include text($ff, 16rem, 24rem, 400, $color-titles);
+      margin-bottom: 6rem;
+      text-transform: uppercase;
+    }
+    a {
+        transition: $transition;
     }
 
     &__image {
+      padding: 10rem 0;
+
+      img {
+        max-width: 280rem;        
+        max-height: 131rem;
+      }
     }
 
     &__category {
+      @include text($ff, 13.1rem, 22rem, 400, $color-primary);
+      text-transform: uppercase;
+      &:hover,
+      &:active {
+        color: $color-titles;
+      }
     }
 
     &__desc {
+        @include text($ff, 16.8rem, 24rem, 300, $color-titles);
+        margin: 2rem 0;
+      
+      &:hover,
+      &:active {
+        color: $color-primary;
+      }
     }
 
     &__date {
+        @include text($ff, 13.1rem, 22rem, 400, $grey);
+        padding-bottom: 10rem;
+        border-bottom: 1rem solid #e4e4e4;
     }
   }
 }
