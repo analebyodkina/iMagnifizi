@@ -449,28 +449,29 @@ button {
   background: #f0f0f0;
   position: relative;
   min-height: 100vh; }
+  @media (max-width: 960px) {
+    .sidebar._left {
+      -webkit-transform: translateX(-500%);
+              transform: translateX(-500%); } }
   @media (max-width: 480px) {
     .sidebar._left {
       position: fixed;
       left: -1000%; } }
   .sidebar._left .sidebar__header {
     background: #16cfc1; }
-    @media (max-width: 960px) {
-      .sidebar._left .sidebar__header {
-        -webkit-transform: translateX(-1000%);
-                transform: translateX(-1000%); } }
-  @media (max-width: 960px) {
-    .sidebar._left .sidebar__items {
-      -webkit-transform: translateX(-1000%);
-              transform: translateX(-1000%); } }
   .sidebar._left .sidebar__button {
     background-color: #16cfc1;
-    display: none; }
+    display: none;
+    left: 0; }
     @media (max-width: 960px) {
       .sidebar._left .sidebar__button {
         display: -webkit-box;
         display: -ms-flexbox;
-        display: flex; } }
+        display: flex;
+        right: 0;
+        z-index: 1;
+        -webkit-transform: translateX(500%);
+                transform: translateX(500%); } }
   .sidebar__header {
     padding: 15rem 30rem;
     font-family: "SourceSansPro";

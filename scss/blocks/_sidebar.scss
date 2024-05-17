@@ -3,31 +3,29 @@
     position: relative;
     min-height: 100vh;
   &._left {
+   
+    @include tablet {
+      transform: translateX(-500%);
+    }
     @include mobile {
       position: fixed;
       left: -1000%;
     }
     .sidebar__header {
       background: $color-primary; 
-      @include tablet {
-        transform: translateX(-1000%);
-      }     
-    }
-    .sidebar__items {
-      @include tablet {
-        transform: translateX(-1000%);
-      } 
-    }
+    }    
     .sidebar__button {
       background-color: $color-primary;
       display: none;
+      left: 0;
       @include tablet {
         display: flex;
+        right: 0;
+        z-index: 1;
+        transform: translateX(500%);        
       }
-      // @include mobile {
-      //   display: none;
-      // }
     }
+    
   } 
   
   &__header {
@@ -169,15 +167,15 @@
     }
   }
   &.active {
-        transform: translateX(0);
-        position: absolute;
-        z-index: 99;
-        right: 0;
-        top: 0;
-        .sidebar__button {
-          transform: translateX(0);
-        }
-      }
+    transform: translateX(0);
+    position: absolute;
+    z-index: 99;
+    right: 0;
+    top: 0;
+    .sidebar__button {
+      transform: translateX(0);
+    }
+  }
   }
   &__button {
     position: absolute;
