@@ -1,0 +1,103 @@
+.main {
+  background: $white;
+  &__header {
+    padding: 18rem 30rem 17rem;
+    display: flex;
+    align-items: center;
+    border-bottom: 1rem solid #eee;
+    @include text($ff, 16rem, 26rem, 600, $header-title);
+    text-transform: uppercase;
+  }
+  span {
+    color: $grey;
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    padding: 30rem 0 20rem;
+    gap: 30rem;
+  }
+  &__row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 30rem;
+    row-gap: 30rem;
+    border-bottom: 1px solid #eee;
+  }
+
+  &__item {
+    max-width: 345rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding-bottom: 40rem;
+   
+  }
+
+  &__image {
+    position: relative;
+    margin-bottom: 16rem;
+  }
+
+  &__star {
+    cursor: pointer;
+    position: absolute;
+    transition: all 0.7s ease;
+    z-index: 1;
+    bottom: 20rem;
+    left: 20rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 6rem;
+    width: 32rem;
+    height: 32rem;
+    transform: rotate(45deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    i {
+      font-size: 16rem;
+      color: $white;
+      transform: rotate(-45deg);
+    }
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+    gap: 6rem;
+    @include text($ff, 14rem, 24rem, 400, $grey-light);
+    text-transform: uppercase;
+    margin-bottom: 5rem;
+    a {
+      color: $color-primary;
+      transition: $transition;
+      &:hover,
+      &:active {
+        color: $color-titles;
+      }
+    }
+  }
+
+  
+
+  &__title {
+    margin-bottom: 10rem;
+    a {
+        @include text($ff, 22rem, 24rem, 400, $color-titles);
+        transition: $transition;
+      &:hover,
+      &:active {
+        color: $color-primary;
+      }
+    }
+  }
+
+  &__desc {
+    @include text($ff, 16rem, 24rem, 400, $color-text);
+  }
+}
+.fa-solid {
+}
+.fa-star {
+}
