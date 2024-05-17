@@ -5,8 +5,11 @@
     display: flex;
     align-items: center;
     border-bottom: 1rem solid #eee;
-    @include text($ff, 16rem, 26rem, 600, $header-title);
+    h2 {
+      @include text($ff, 16rem, 26rem, 600, $header-title);
     text-transform: uppercase;
+    }
+    
   }
   span {
     color: $grey;
@@ -24,6 +27,9 @@
     padding: 0 30rem;
     row-gap: 30rem;
     border-bottom: 1px solid #eee;
+    @include tablet-small {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__item {
