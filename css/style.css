@@ -681,8 +681,8 @@ button {
     margin-bottom: 16rem;
     cursor: pointer; }
     .main__image img {
-      -webkit-transition: .5s all ease;
-      transition: .5s all ease; }
+      -webkit-transition: 0.5s all ease;
+      transition: 0.5s all ease; }
     .main__image:hover img {
       opacity: 0.8; }
     .main__image:hover .main__star {
@@ -712,8 +712,8 @@ button {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    -webkit-transition: .5s all ease;
-    transition: .5s all ease; }
+    -webkit-transition: 0.5s all ease;
+    transition: 0.5s all ease; }
     .main__star i {
       font-size: 16rem;
       color: #fff;
@@ -758,8 +758,30 @@ button {
     line-height: 24rem;
     font-weight: 400;
     color: #767676; }
-  .main .item:hover .main__image img {
-    -webkit-filter: brightness(170%);
-            filter: brightness(170%); }
-  .main .item:hover .main__title a {
-    color: #16cfc1; }
+  .main__pagination {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0 30rem; }
+    .main__pagination span {
+      color: #16cfc1;
+      -webkit-transition: 0.2s all ease-in-out;
+      transition: 0.2s all ease-in-out; }
+    .main__pagination a {
+      font-family: "SourceSansPro";
+      font-size: 18rem;
+      line-height: 24rem;
+      font-weight: 400;
+      color: #16cfc1;
+      -webkit-transition: 0.2s all ease-in-out;
+      transition: 0.2s all ease-in-out; }
+      .main__pagination a:hover, .main__pagination a:active {
+        color: #444444; }
+        .main__pagination a:hover span, .main__pagination a:active span {
+          color: #444444; }

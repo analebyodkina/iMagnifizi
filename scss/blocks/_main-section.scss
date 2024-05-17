@@ -40,7 +40,7 @@
     margin-bottom: 16rem;
     cursor: pointer;
     img {
-        transition: .5s all ease;
+      transition: 0.5s all ease;
     }
     &:hover {
       img {
@@ -50,7 +50,7 @@
         background-color: $white;
       }
       .main__star i {
-        color: rgba(0, 0, 0, 0.7);;
+        color: rgba(0, 0, 0, 0.7);
       }
     }
   }
@@ -70,7 +70,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: .5s all ease;
+    transition: 0.5s all ease;
     i {
       font-size: 16rem;
       color: $white;
@@ -110,18 +110,24 @@
   &__desc {
     @include text($ff, 16rem, 24rem, 400, $color-text);
   }
-  .item {
-    &:hover {
-      .main__image img {
-        filter: brightness(170%);
-      }
-      .main__title a {
+  &__pagination {
+    @include flex-between;
+    padding: 0 30rem;
+    span {
         color: $color-primary;
+        transition: $transition;
+      }
+    a {
+      @include text($ff, 18rem, 24rem, 400, $color-primary);
+      transition: $transition;
+      &:hover,
+      &:active {
+        color: $color-titles;
+        span {
+          color: $color-titles;
+        }
       }
     }
+    
   }
-}
-.fa-solid {
-}
-.fa-star {
 }
