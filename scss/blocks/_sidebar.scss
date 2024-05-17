@@ -2,10 +2,9 @@
     background: #f0f0f0;
     position: relative;
     min-height: 100vh;
-  &._left {
-   
+  &._left {    
     @include tablet {
-      transform: translateX(-500%);
+      transform: translateX(-300%);
     }
     @include mobile {
       position: fixed;
@@ -22,9 +21,19 @@
         display: flex;
         right: 0;
         z-index: 1;
-        transform: translateX(500%);        
+        transform: translateX(300%);        
       }
     }
+    //  &.active {
+    //   transform: translateX(0%);
+      
+      
+    //   position: fixed;
+    //   left:0;
+    //   .sidebar__button {
+    //     transform: translateX(0%);
+    //   }
+    // }
     
   } 
   

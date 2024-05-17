@@ -37,6 +37,7 @@ html {
   @include mobile {
     grid-template-columns: 1fr;
   }
+  
 }
 body {
   font-family: $ff;

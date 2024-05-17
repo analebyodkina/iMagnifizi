@@ -451,8 +451,8 @@ button {
   min-height: 100vh; }
   @media (max-width: 960px) {
     .sidebar._left {
-      -webkit-transform: translateX(-500%);
-              transform: translateX(-500%); } }
+      -webkit-transform: translateX(-300%);
+              transform: translateX(-300%); } }
   @media (max-width: 480px) {
     .sidebar._left {
       position: fixed;
@@ -470,8 +470,8 @@ button {
         display: flex;
         right: 0;
         z-index: 1;
-        -webkit-transform: translateX(500%);
-                transform: translateX(500%); } }
+        -webkit-transform: translateX(300%);
+                transform: translateX(300%); } }
   .sidebar__header {
     padding: 15rem 30rem;
     font-family: "SourceSansPro";
