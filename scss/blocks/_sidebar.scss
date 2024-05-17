@@ -2,12 +2,27 @@
     background: #f0f0f0;
   &._left {
     .sidebar__header {
-      background: $color-primary;
+      background: $color-primary;      
     }
-  }
-  &._right {
-    .sidebar__header {
-      background: $yellow;
+    .sidebar__button {
+      background-color: $color-primary;
+      display: none;
+      // @include desktop-small {
+      //   display: block;
+      // }
+    }
+  } 
+  &__button {
+    min-width: 50rem;
+    max-width: 50rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    i {
+      font-size: 30rem;
+      padding: 15rem 0;
+      color: $white;
+      width: 15rem;
     }
   }
   &__header {
@@ -27,6 +42,7 @@
     padding: 30rem 30rem 20rem;
     display: flex;
     flex-direction: column;
+    cursor: pointer;
   }
 
   .item {
@@ -73,5 +89,58 @@
         padding-bottom: 10rem;
         border-bottom: 1rem solid #e4e4e4;
     }
+  }
+  &._right {
+    
+    .sidebar__button {
+      background-color: $yellow;
+      display: none;
+      @include desktop-small {
+        display: flex;
+      }
+    }
+    
+    .sidebar__header {
+      background: $yellow;
+      padding: 15rem 30rem;
+      @include desktop-small {
+        transform: translateX(120%);
+      }
+    }
+    .sidebar__items {
+      padding: 30rem 30rem 20rem;
+      @include desktop-small {
+        transform: translateX(120%);
+      }
+    }
+    .item {
+      padding: 0;
+    }
+    .item__category {
+      @include text($ff, 12.2rem, 22rem, 400, $yellow);
+      text-transform: uppercase;
+      &:hover,
+      &:active {
+        color: $color-titles;
+      }
+
+    }
+    .item__image {
+      padding: 10rem 0;
+
+      img {
+        max-width: 200rem;        
+        max-height: 94rem;
+      }
+    }
+    .item__desc {
+      @include text($ff, 15rem, 24rem, 300, $color-titles);
+      margin: 2rem 0;
+    
+    &:hover,
+    &:active {
+      color: $color-primary;
+    }
+  }
   }
 }

@@ -16,6 +16,7 @@ html {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  overflow: hidden;
 }
 .container {
   max-width: 1380rem;
@@ -26,6 +27,9 @@ html {
   flex-grow: 1;
   display: grid;
   grid-template-columns: 340rem 1fr 260rem;
+  @include desktop-small {
+    grid-template-columns: 340rem 1fr 50rem;
+  }
 }
 body {
   font-family: $ff;

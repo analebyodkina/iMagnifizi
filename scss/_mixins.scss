@@ -35,24 +35,24 @@
   align-items: center;
 }
 
-@mixin desktop-small-1200 {
+@mixin desktop-small {
   @media (max-width: $desktop-small) {
     @content;
   }
 }
-@mixin tablet-992 {
+@mixin tablet {
   @media (max-width: $tablet) {
     @content;
   }
 }
 
-@mixin tablet-small-768 {
+@mixin tablet-small {
   @media (max-width: $tablet-small) {
     @content;
   }
 }
 
-@mixin mobile-576 {
+@mixin mobile {
   @media (max-width: $mobile) {
     @content;
   }
