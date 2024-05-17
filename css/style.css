@@ -673,15 +673,27 @@ button {
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
             flex-grow: 1;
-    padding-bottom: 40rem; }
+    padding-bottom: 40rem;
+    -webkit-transition: 0.2s all ease-in-out;
+    transition: 0.2s all ease-in-out; }
   .main__image {
     position: relative;
-    margin-bottom: 16rem; }
+    margin-bottom: 16rem;
+    cursor: pointer; }
+    .main__image img {
+      -webkit-transition: .5s all ease;
+      transition: .5s all ease; }
+    .main__image:hover img {
+      opacity: 0.8; }
+    .main__image:hover .main__star {
+      background-color: #fff; }
+    .main__image:hover .main__star i {
+      color: rgba(0, 0, 0, 0.7); }
   .main__star {
     cursor: pointer;
     position: absolute;
-    -webkit-transition: all 0.7s ease;
-    transition: all 0.7s ease;
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
     z-index: 1;
     bottom: 20rem;
     left: 20rem;
@@ -699,7 +711,9 @@ button {
             align-items: center;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
-            justify-content: center; }
+            justify-content: center;
+    -webkit-transition: .5s all ease;
+    transition: .5s all ease; }
     .main__star i {
       font-size: 16rem;
       color: #fff;
@@ -744,3 +758,8 @@ button {
     line-height: 24rem;
     font-weight: 400;
     color: #767676; }
+  .main .item:hover .main__image img {
+    -webkit-filter: brightness(170%);
+            filter: brightness(170%); }
+  .main .item:hover .main__title a {
+    color: #16cfc1; }

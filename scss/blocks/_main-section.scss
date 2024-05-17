@@ -32,18 +32,33 @@
     flex-direction: column;
     flex-grow: 1;
     padding-bottom: 40rem;
-   
+    transition: $transition;
   }
 
   &__image {
     position: relative;
     margin-bottom: 16rem;
+    cursor: pointer;
+    img {
+        transition: .5s all ease;
+    }
+    &:hover {
+      img {
+        opacity: 0.8;
+      }
+      .main__star {
+        background-color: $white;
+      }
+      .main__star i {
+        color: rgba(0, 0, 0, 0.7);;
+      }
+    }
   }
 
   &__star {
     cursor: pointer;
     position: absolute;
-    transition: all 0.7s ease;
+    transition: all 1s ease;
     z-index: 1;
     bottom: 20rem;
     left: 20rem;
@@ -55,6 +70,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: .5s all ease;
     i {
       font-size: 16rem;
       color: $white;
@@ -79,13 +95,11 @@
     }
   }
 
-  
-
   &__title {
     margin-bottom: 10rem;
     a {
-        @include text($ff, 22rem, 24rem, 400, $color-titles);
-        transition: $transition;
+      @include text($ff, 22rem, 24rem, 400, $color-titles);
+      transition: $transition;
       &:hover,
       &:active {
         color: $color-primary;
@@ -95,6 +109,16 @@
 
   &__desc {
     @include text($ff, 16rem, 24rem, 400, $color-text);
+  }
+  .item {
+    &:hover {
+      .main__image img {
+        filter: brightness(170%);
+      }
+      .main__title a {
+        color: $color-primary;
+      }
+    }
   }
 }
 .fa-solid {
