@@ -16,6 +16,13 @@
     &__burger,
     #close {
         display: none;
+        @include mobile {
+            display: flex;
+            padding: 15rem 0;
+            justify-content: flex-end;
+            color: $white;
+            opacity: 0.7;
+        }
     }
 
 }

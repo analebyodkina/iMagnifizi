@@ -2,6 +2,7 @@
 function navToggle() {
     var headerUl = document.getElementById("headerUl");
     headerUl.classList.toggle("active");
+    document.body.classList.toggle('overflow-y-hidden');
   }
 
 // right sidebar
