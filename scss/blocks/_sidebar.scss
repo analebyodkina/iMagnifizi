@@ -2,7 +2,9 @@
     background: #f0f0f0;
     position: relative;
     min-height: 100vh;
-  &._left {    
+    transition: .3s all ease-in-out;
+  &._left {  
+
     @include tablet {
       transform: translateX(-300%);
     }
@@ -12,6 +14,9 @@
     }
     .sidebar__header {
       background: $color-primary; 
+      @include tablet {
+        padding-left: 80rem;
+      }
     }    
     .sidebar__button {
       background-color: $color-primary;
@@ -24,16 +29,14 @@
         transform: translateX(300%);        
       }
     }
-    //  &.active {
-    //   transform: translateX(0%);
-      
-      
-    //   position: fixed;
-    //   left:0;
-    //   .sidebar__button {
-    //     transform: translateX(0%);
-    //   }
-    // }
+     &.active {
+      transform: translateX(0%);     
+      width: 340px;
+      z-index: 999;
+      .sidebar__button {
+        transform: translateX(0%);
+      }
+    }
     
   } 
   
@@ -199,6 +202,9 @@
       padding: 15rem 0;
       color: $white;
       width: 15rem;
+      @include desktop-small {
+        padding: 12rem 0;
+      }
     }
     @include mobile {
       display: none;

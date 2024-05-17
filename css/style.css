@@ -448,7 +448,9 @@ button {
 .sidebar {
   background: #f0f0f0;
   position: relative;
-  min-height: 100vh; }
+  min-height: 100vh;
+  -webkit-transition: .3s all ease-in-out;
+  transition: .3s all ease-in-out; }
   @media (max-width: 960px) {
     .sidebar._left {
       -webkit-transform: translateX(-300%);
@@ -459,6 +461,9 @@ button {
       left: -1000%; } }
   .sidebar._left .sidebar__header {
     background: #16cfc1; }
+    @media (max-width: 960px) {
+      .sidebar._left .sidebar__header {
+        padding-left: 80rem; } }
   .sidebar._left .sidebar__button {
     background-color: #16cfc1;
     display: none;
@@ -472,6 +477,14 @@ button {
         z-index: 1;
         -webkit-transform: translateX(300%);
                 transform: translateX(300%); } }
+  .sidebar._left.active {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    width: 340px;
+    z-index: 999; }
+    .sidebar._left.active .sidebar__button {
+      -webkit-transform: translateX(0%);
+              transform: translateX(0%); }
   .sidebar__header {
     padding: 15rem 30rem;
     font-family: "SourceSansPro";
@@ -624,6 +637,9 @@ button {
       padding: 15rem 0;
       color: #fff;
       width: 15rem; }
+      @media (max-width: 1200px) {
+        .sidebar__button i {
+          padding: 12rem 0; } }
     @media (max-width: 480px) {
       .sidebar__button {
         display: none; } }
